@@ -1,0 +1,94 @@
+tr:hover {background-color:rgba(128, 128, 128, 0.959)}
+th{background-color: rgba(51, 77, 50, 0.836)}
+
+tr:hover {background-color:#d67baaa1}
+body { 
+    background-color: powderblue;height: 560px;
+    background-image: url("rg.jpg"); 
+    background-repeat: no-repeat, repeat;
+    height: 500px;
+    background-position: center;
+   
+    background-size: cover;
+    position: relative;
+  
+}
+table {
+  width: 100%;
+  height: 50%;
+    border:5px ;
+    padding :40px 90px;
+    align:center;
+  
+
+
+}
+div{
+  background-color:#E5E7E9;
+}
+
+td {
+  height: 30px;
+}
+h1{
+  
+  text-align: center;
+}
+th {
+  height: 50px;
+}
+button {
+  background-color: #d67baaa1;
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px px;
+  cursor: pointer;
+  width: 100%;
+}
+button:hover {
+  -ms-transform: scale(1); /* IE 9 */
+  -webkit-transform: scale(1.0); /* Safari 3-8 */
+  transform: scale(1.1); 
+}
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+  }
+
+  #DashBoard {
+    top: 30px;
+    background-color: #555
+  }
+  #mySidenav a:hover {
+    right: 0;
+  }
+  
+  #mySidenav a {
+    position: absolute;
+    right: -100px;
+    transition: 0.3s;
+    padding: 15px;
+    width: 100px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    border-radius: 0 5px 5px 0;
+  }
+  page {
+    background-color: green
+  }

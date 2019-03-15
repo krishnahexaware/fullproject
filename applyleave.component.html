@@ -1,0 +1,107 @@
+
+<br/>
+<body>
+<table align="center">
+  <h1 style= "color:rgba(22, 18, 1, 0.993);">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>APPLY LEAVE</b> </h1>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div >
+      <form #userForm="ngForm" (ngSubmit)="applyLeave(userForm)">
+      <div class="form-group">
+          <label for= "leaveStartDate"><b><font size="4">Start Date</font></b></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="Date" required="required" [(ngModel)]="model.leaveStartDate" name="leaveStartDate" #leaveStartDate="ngModel"  >  
+          <div *ngIf="leaveStartDate.invalid && userForm.submitted && !isValidFormSubmitted"  [ngClass] = "'error'"> 
+                <h6>Start Date is Required.</h6>
+               </div>
+               <br/>
+               <br/>
+      </div>
+      <div class= "form-group">
+              <label for= "leaveEndDate"><b><font size="4">End Date</font>&nbsp;</b> </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type = "Date" class= "form-control"
+              id = "leaveEndDate" required="required"
+              [(ngModel)]= "model.leaveEndDate" name="leaveEndDate" #leaveEndDate="ngModel" (change)="calculateDays()">
+              <div *ngIf="leaveEndDate.invalid && userForm.submitted && !isValidFormSubmitted"  [ngClass] = "'error'"> 
+                     <h6>End Date is Required.</h6> 
+                    </div>
+                    <br/>
+                    <br/>
+          </div>
+          <div class="form-group">
+                  <label for="leaveType"><b><font size="4">Leave Type</font></b></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <select [(ngModel)]="model.leaveType" name="leaveType" required="required" #leaveType="ngModel">
+                      <option value="EL">EL</option>
+                      <option value="PL">PL</option>
+                      <option value="ML">ML</option>
+                  </select>
+          </div>
+          <br/>
+          <br/>
+          <div class= "form-group">
+                  <label for= "leaveNoOfDays"><b><font size="4">Number of Days</font></b> </label>&nbsp;
+                  <input type = "number" class= "form-control" readonly
+                  id = "leaveNoOfDays" required="required"
+                  [(ngModel)]= "model.leaveNoOfDays" name="leaveNoOfDays" #leaveNoOfDays="ngModel" >
+                  <div *ngIf="leaveNoOfDays.invalid && userForm.submitted && !isValidFormSubmitted"  [ngClass] = "'error'"> 
+                          <h6>Leave Days is Required.</h6> 
+                         </div>
+              </div>
+              <br/>
+              <br/>
+          <div class= "form-group">
+                  <label for= "leaveReason"><b><font size="4">Leave Reason</font> </b></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <input type = "text" class= "form-control" size="30"
+                  id = "leaveReason" required="required"
+                  [(ngModel)]= "model.leaveReason" name="leaveReason" #leaveReason="ngModel">
+                  <div *ngIf="leaveReason.invalid && userForm.submitted && !isValidFormSubmitted"  [ngClass] = "'error'"> 
+                          <h6>Reason is Required.</h6> 
+                         </div>
+              </div>
+              <br/>
+              <br/>
+              <div class= "form-group">
+                        <label for= "ssl"><b><font size="4">SSL STATUS</font> </b></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type = "text" class= "form-control" size="30"
+                        id = "ssl" required="required"
+                        [(ngModel)]= "model.sslLeave" name="ssl" #leaveReason="ngModel">
+                    </div>
+
+              <br/>
+              <br/>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div align="center">
+              <button class=button>Apply</button>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <button  type ="button" class="button" (click)="cancel()"><i><b>Cancel</b></i></button></div>
+                        
+              <h3 *ngIf="isValidFormSubmitted == true">STATUS: {{this.msg}}</h3>
+             
+
+  <div *ngIf="isValidFormSubmitted == true">
+        <div *ngIf="msg1 == 1; then thenBlock1; ">
+        </div>
+
+              <ng-template #thenBlock1>
+              <img src = "https://images-na.ssl-images-amazon.com/images/I/51zLZbEVSTL._SY355_.jpg" alt = "Happy" width="150" height="150">
+              </ng-template>
+        <div *ngIf="msg1 == 0; then thenBlock2; ">
+        </div>
+        
+                <ng-template #thenBlock2>
+                <img src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQAvwPY8KvVQDxIjaff_RloygqR-PEgZFLbEn99IFWBQrh65jd" alt = "Happy" width="150" height="150">
+                </ng-template>
+        </div>
+      </form>
+  </div>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  </table>
+
+
+</body>

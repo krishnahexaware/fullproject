@@ -1,0 +1,40 @@
+<body  style = "text-align: center;" ><br/>
+  <h1 style="text-align:center;color:BLACK;"><b><i>APPROVE / DENY</i></b></h1>
+  <table align="center">
+      <tbody>
+ <tr><td> Employee Id</td><td>:</td>
+  <td>{{ (employee | async )?.empId}}</td>
+</tr><tr></tr><tr>
+    <td> Full Name </td> <td>:</td>
+    <td>{{ (employee | async )?.empFullName}}</td>
+</tr><tr></tr><tr>
+    <td>Start Date</td> <td>:</td>
+    <td>{{ (leaveDetails | async )?.leaveStartDate}}</td>
+</tr><tr></tr><tr>
+    <td>End Date</td><td>:</td>
+    <td>{{ (leaveDetails | async )?.leaveEndDate}}</td>
+</tr><tr></tr><tr>
+    <td>Available leave</td><td>:</td>
+    <td>{{ (employee | async )?.empAvailabeLeave}}</td>
+</tr><tr></tr><tr>
+    <td>Leave Type</td><td>:</td>
+    <td>{{ (leaveDetails | async )?.leaveType}}</td>
+</tr><tr></tr><tr>
+    <td> Leave Reason</td><td>:</td>
+    <td>{{ (leaveDetails | async )?.leaveReason}}</td>
+</tr>
+</table>
+  <br>
+  
+  
+  Comments:
+  <input type = "text" [(ngModel)] = "obj.leaveMgrComments"><br>
+  <br/>
+  <input type = "button" class="button button1" value = "APPROVE" (click)="approve()">&nbsp;
+  <input type = "button" class="button button2"value = "DENY" (click)="deny()">&nbsp;
+  <input type = "button" class="button button3"value = "CANCEL" (click)="cancel()">
+  <br><br/>
+  Result is {{msg}}
+  
+  
+  </body>

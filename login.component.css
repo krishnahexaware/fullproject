@@ -1,0 +1,122 @@
+body { 
+  background-color: powderblue;height: 560px;
+  background-image: url("rg.jpg"); 
+  background-repeat: no-repeat, repeat;
+  height: 560px;
+  background-position: center;
+ 
+  background-size: cover;
+  position: relative;
+
+}
+img {
+  border-radius: 50%;
+}
+Button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+  }
+  .container {
+    padding: 16px;
+  }
+  input[type=text] {
+    width: 130px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: white;
+
+    background-position: 10px 10px; 
+    background-repeat: no-repeat;
+    padding: 12px 20px 12px 40px;
+    -webkit-transition: width 0.4s ease-in-out;
+    transition: width 0.4s ease-in-out;
+  }
+  
+  input[type=text]:focus {
+    width: 100%;
+  }
+
+  input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    size :100%;
+  }
+  .zoom:hover {
+    -ms-transform: scale(1); /* IE 9 */
+    -webkit-transform: scale(1.0); /* Safari 3-8 */
+    transform: scale(1.1); 
+  }
+  table{
+    border:10px;
+    padding :12px 20px;
+    width:20%;
+    height: 150px;
+    border-color:black;
+    border: 1px solid black;
+    align:center;
+
+  }
+  input[type=text]:focus {
+    background-color: lightblue;
+  }
+  .imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+  }
+  img.avatar 
+  {
+    vertical-align: middle;
+    width: 15%;
+    height: 200px;
+    border-radius: 50%;
+  }
+  #Home {
+    top: 30px;
+    background-color: #555
+  }
+  #mySidenav a:hover {
+    right: 0;
+  }
+  
+  #mySidenav a {
+    position: absolute;
+    right: -100px;
+    transition: 0.3s;
+    padding: 15px;
+    width: 100px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    border-radius: 0 5px 5px 0;
+  }
+
+  .glow {
+    font-size: 50px;
+    color: #fff;
+    text-align: center;
+    -webkit-animation: glow 1s ease-in-out infinite alternate;
+    -moz-animation: glow 1s ease-in-out infinite alternate;
+    animation: glow 1s ease-in-out infinite alternate;
+  }
+  
+  /* @-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    }
+    
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+  } */
+

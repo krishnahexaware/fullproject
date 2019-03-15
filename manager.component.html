@@ -1,0 +1,32 @@
+<body style="font-size:20px;">
+<div *ngIf="empId == 0; then thenBlock; else elseBlock">
+</div>
+ <ng-template #thenBlock>
+   <div> <h1 style="text-align:center;" style="font-size:100px;"><b>Welcome CEO..!!!</b></h1></div>
+</ng-template>
+<ng-template #elseBlock>
+  <div *ngIf="employee.empMgrId != 0">
+    <!-- <table align="left">
+   <tr><td>EMP ID :</td><td>
+    {{ (employee | async)?.empId }}</td></tr>
+  <tr><td>NAME :</td><td>
+    {{ (employee | async)?.empFullName }}</td></tr>
+  <tr><td>EMAIL :</td><td>
+    {{ (employee | async)?.empEmail }}</td></tr>
+  <tr><td>MOBILE NO :</td><td>
+    {{ (employee | async)?.empMobile }}</td></tr>
+  <tr><td>DEPARTMENT :</td><td>
+    {{ (employee | async)?.empDepartment }}</td></tr>
+  </table> -->
+  <!-- <h1 style="text-align:center;"><b>MANAGER DETAILS</b></h1> -->
+  
+  <pre><b>
+  Manager Id    :{{ (employee | async )?.empId}}
+  Full Name     :{{ (employee | async )?.empFullName}}
+  Email         :{{ (employee | async )?.empEmail}}
+  Mobile Number :{{ (employee | async )?.empMobile}}</b>
+</pre>
+
+  </div>
+</ng-template>
+</body>

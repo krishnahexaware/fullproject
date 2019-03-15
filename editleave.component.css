@@ -1,0 +1,32 @@
+
+  h1 {
+    color: blue;
+  }
+  p {
+    color: red;
+  }
+  body {
+    background-color:grey; /*Default bg, similar to the background's base color*/
+     background-image: url("http://webverden.com/portrait/Top-View-Accessories-Business-Office-Pen.jpg"); 
+     height: 600px;
+     background-size: cover  /*Positioning*/
+     /*Prevent showing multiple background images*/
+ }
+ Button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 30%;
+}
+Cancel {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 30%;
+}

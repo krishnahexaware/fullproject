@@ -1,0 +1,111 @@
+<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<h1 style="text-align:center;"><b>PENDING LEAVE APPROVALS</b></h1>
+<div id="mySidenav" class="sidenav">
+    <a href="/DashBoard" id="DashBoard"><i class="fa fa-mail-reply"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DashBoard</a>
+  </div>
+<div *ngIf="totalRec1 == 0; then thenBlock; else elseBlock">
+  </div>
+
+  <ng-template #thenBlock>
+      <div> <h1 style="text-align:center;"><b>No leave to Approve/Deny</b></h1></div>
+   </ng-template>
+ 
+  <ng-template #elseBlock>
+<p>
+    <table border="3" align="center">
+        <div *ngFor = "let emp of empData | async">  
+            <div *ngIf ="emp.empMgrId == empId" >
+              <div class="iterator">
+                <tr>
+                  <th width="26098">Employee ID</th> 
+                  <th width="26998">Employee Name</th>
+                  <th width="26998">Available Leave</th></tr>
+                <tr>  <td width="26098">{{emp.empId}}</td>
+                  <td width="26998">{{emp.empFullName}}</td>
+                  <td width="26998">{{emp.empAvailabeLeave}}</td>
+                </tr></div>
+                <tr border = "3">
+                    <th width="80"> </th>
+                  <th width="95"> Employee ID </th>
+                  <th width="95"> Leave ID </th>
+                  <th width="95"> Leave Type </th>
+                  <th width="145"> Start Date </th>
+                  <th width="130"> End Date </th>
+                  <th width="130"> Applied On </th>
+                  <th width="115"> Reason</th>
+                  <th width="130"> Leave No of Days </th>
+                  <th width="110"> Leave Status </th>
+                  <th width="170"> Leave Manager Comments </th> 
+                  <!-- <th >Tat</th> -->
+        </tr>
+      </div>
+      <table border ="3">
+        <tbody class=leave>
+        <div *ngFor ="let u of leaveDetails | async | orderBy: order:reverse " (click) ="setClickRowDup(u.leaveId,u.leaveEmpId)">
+          <div *ngIf ="emp.empId ==u.leaveEmpId" rowspan=100 px> 
+            <div *ngIf="tat(u.leaveStartDate)==1">
+                <!-- <div *ngIf="u.leaveStatus==PENDING"> -->
+                <tr bgcolor="red" >
+                    <td width="70"><input type="checkbox" (change)="checkbox(u.leaveId,emp.empId)" [checked]="demo"></td>
+                      <td width="95"> {{u.leaveEmpId}}</td>
+                      <td width="95">{{u.leaveId}}</td>
+                      <td width="95">{{u.leaveType}}</td>
+                      <td width="145">{{u.leaveStartDate}}</td>
+                      <td width="130">{{u.leaveEndDate}}</td>
+                      <td width="130">{{u.leaveAppliedOn}}</td>
+                      <td width="115">{{u.leaveReason}}</td>
+                      <td width="130">{{u.leaveNoOfDays}}</td>
+                      <td width="110">{{u.leaveStatus}}</td>
+                      <td width="170">{{u.leaveMgrComments}}</td>
+                      <!-- <td width="170">{{tat(u.leaveStartDate,u.leaveEndDate)}}</td> -->
+                    </tr>
+            <!-- </div> -->
+          </div>
+            <div *ngIf="tat(u.leaveStartDate) > 1">
+                <tr>
+                    <td width="70"><input type="checkbox" (change)="checkbox(u.leaveId,emp.empId)" [checked]="demo"></td>
+                      <td width="95"> {{u.leaveEmpId}}</td>
+                      <td width="95">{{u.leaveId}}</td>
+                      <td width="95">{{u.leaveType}}</td>
+                      <td width="145">{{u.leaveStartDate}}</td>
+                      <td width="130">{{u.leaveEndDate}}</td>
+                      <td width="130">{{u.leaveAppliedOn}}</td>
+                      <td width="115">{{u.leaveReason}}</td>
+                      <td width="130">{{u.leaveNoOfDays}}</td>
+                      <td width="110">{{u.leaveStatus}}</td>
+                      <td width="170">{{u.leaveMgrComments}}</td>
+                      <!-- <td width="170">{{tat(u.leaveStartDate,u.leaveEndDate)}}</td> -->
+                    </tr>
+            </div>
+          </div> 
+       
+        </div>
+        </tbody>
+        
+      </table>
+    </div>
+ </table>
+ <div align ="center" *ngIf ="showButton" class="zoom">
+   <button  type ="button" (click)="approveDeny()"><i><b>Approve/Deny</b></i></button>
+</div>
+ <div align ="center" *ngIf ="!showButton">
+    <button  type ="button" disabled><i><b>Approve/Deny</b></i></button>
+ </div>
+
+ 
+ <div align ="center" *ngIf ="appshow" >
+    <button  type ="button" (click)="approveAll()"><i><b>ApproveAll</b></i></button>
+    <br/>
+    <i align ="centre" class ="msg1"><b>{{msg}}</b></i>
+  </div> 
+  <div align ="center" *ngIf ="!appshow">
+      <button  type ="button" disabled><i><b>ApproveAll</b></i></button>
+   </div>
+
+
+</ng-template>
+</body>
+
+
+

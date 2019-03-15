@@ -1,0 +1,69 @@
+<body>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<h1 style="text-align:center;"><b>LEAVE HISTORY</b></h1>
+<div id="mySidenav" class="sidenav">
+    
+    <a href="/DashBoard" id="DashBoard"><i class="fa fa-mail-reply"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DashBoard</a>
+</div>
+    <div *ngIf="totalRec == 0; then thenBlock; else elseBlock">
+        </div>
+      
+        <ng-template #thenBlock>
+            <div> <h1 style="text-align:center;"><b>No leave appiled</b></h1></div>
+         </ng-template>
+       
+        <ng-template #elseBlock>
+  
+<table border ="3" align="center">
+    <tr >
+    <th width ="100">Employee ID</th>
+    <th width ="60">Leave ID</th>
+    <th>Leave Type</th> 
+    <!-- <th>Diff</th>
+    <th>datediff</th> -->
+    <th>Start Date </th>
+    <th>End Date </th>
+    <th>Applied On</th>
+    <th width ="50">Reason</th>
+    <th>No of Days </th>
+    <th>Status </th>
+    <th>Manager Comments</th>
+    <th>Edit</th>
+  </tr>
+  <tbody class="employees">
+  <tr *ngFor ="let leave of leaveDetails | async | paginate: { id: 'listing_pagination',
+  itemsPerPage: 5,
+  currentPage: page,
+  totalItems: totalRec}">
+  <td width ="80">{{leave.leaveEmpId}}</td>
+  <td width ="60">{{leave.leaveId}}</td>
+  <td width ="100">{{leave.leaveType}}</td> 
+  <!-- <td width ="100">{{leave.leaveStartDate-leave.leaveEndDate}}</td>  -->
+  <!-- <td><div *ngIf="leave.leaveStartDate>-leave.leaveEndDate>1">Hi</div> </td> -->
+  <!-- <td><post.expires | leave.leaveStartDate | date 'MM/dd/yyyy HH:mm:ss'></td>
+    <td>{{Date.parse(leave.leaveStartDate) | date: 'short'}}</td> -->
+   <!-- <td> {{(leave.leaveStartDate - leave.leaveEndDate) | date: 'dd-MM-yyyy'}}</td> -->
+   <!-- <td>{{diff(leave.leaveStartDate-leave.leaveEndDate)}}</td> -->
+  <td width ="110">{{leave.leaveStartDate}}</td>
+  <td width ="150">{{leave.leaveEndDate}}</td>
+  <td width ="110">{{leave.leaveAppliedOn}}</td>
+  <td width ="95">{{leave.leaveReason}}</td>
+  <td width ="100">{{leave.leaveNoOfDays}}</td>
+  <td width ="70">{{leave.leaveStatus}}</td>
+  <td width ="130">{{leave.leaveMgrComments}}</td>
+  <td *ngIf="leave.leaveStatus=='PENDING'">
+        <button  type ="button" (click)="Edit(leave.leaveId,leave.leaveEmpId)"><i><b>Edit</b></i></button>      
+  </td>
+<!-- <button  type ="Submit" (click)="Edit(leave.leaveId,leave.leaveEmpId)"><i><b>Edit</b></i></button> -->
+<td *ngIf="leave.leaveStatus=='APPROVED' || leave.leaveStatus=='DENIED'">
+        <button  type ="button" (click)="Edit(leave.leaveId,leave.leaveEmpId)" disabled><i><b>Edit</b></i></button>      
+  </td>
+  </tr>
+  </tbody>
+  </table>
+  <div>
+      <pagination-controls class="page" id="listing_pagination" maxSize="5" directionLinks="true" (pageChange)="page = $event"></pagination-controls>
+    </div>
+
+</ng-template>
+</body>

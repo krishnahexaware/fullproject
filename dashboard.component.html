@@ -1,0 +1,261 @@
+<!-- <ul>
+        <li><a class="active" href="/ ">Home</a></li>
+      
+        <li><a class="active" href="/login ">login</a></li>
+        <li><a class="active" href="/LeaveHistory ">Leavehistory</a></li>
+        <li><a class="active" href="/applyLeave ">Apply Leave</a></li>
+
+        <li><a class="active" href="/leavepending ">Pending Leave Approvals</a></li>
+    </ul> -->
+
+    <!-- <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">Home</a>
+            <a href="#">login</a>
+            <a href="#">LeaveHistory</a>
+          </div>
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+     -->
+    <body>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <div id="mySidenav" class="sidenav" >
+            <a href="#" id="Home">Home&nbsp;&nbsp;&nbsp;<i class="fa fa-fw fa-home"></i></a>
+            <a href="/login" id="login">LogOut&nbsp;&nbsp;<i class="fa fa-sign-out"></i></a>
+            <a href="/applyLeave " id="ApplyLeave">Apply Leave&nbsp;&nbsp;&nbsp;&nbsp;<i class="fa fa-calendar"></i></a>
+            <a href="/LeaveHistory " id="Leavehistory">Leave History&nbsp;&nbsp;<i class="fa fa-history">&nbsp;</i></a>
+            <div class="notification" *ngIf ="name1==1000">
+            <a href="/leavepending " id="leavepending"><i class="fa fa-edit">&nbsp;</i>
+                <span>Leave Approvals</span>
+                <span class="badge">+</span>
+            </a>
+            </div>
+            <div class="notification" *ngIf ="name1==2000">
+                    <a href="/leavepending " id="leavepending"><i class="fa fa-edit">&nbsp;</i>
+                        <span>Leave Approvals</span>
+                        <span class="badge">+</span>
+                    </a>
+            </div>
+            <div class="notification" *ngIf ="name1==3000">
+                    <a href="/leavepending " id="leavepending"><i class="fa fa-edit">&nbsp;</i>
+                        <span>Leave Approvals</span>
+                        <span class="badge">+</span>
+                    </a>
+            </div>
+          </div>
+
+          <h1 style="text-align:center;"><b>EMPLOYEE DETAILS</b></h1>
+
+<table>
+        <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            <td>
+                       <div class = "image" >
+                            <div class = "image-header" *ngIf ="name1==1000" class = "rounded-circle img-responsive" style="text-align:center;">
+                                <div class="flip-card">
+                                    <div class="flip-card-inner">
+                                         <div class="flip-card-front">
+                                         <img src = "https://lh3.googleusercontent.com/a-/AAuE7mAxJdzpGEsJl234oY1rfAoXy2MJwhSMkZPa3UufhXo=s192" alt = "DhivyaB" width="150" height="150">
+                                         </div>
+                                         <div class="flip-card-back">
+                                                <h1>Dhivya</h1> 
+                                                <p>Developer</p> 
+                                                <p>Employee ID:1000</p>
+                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class = "image-header" *ngIf ="name1==2000" class = "rounded-circle img-responsive" style="text-align:center;">
+                                    <div class="flip-card">
+                                        <div class="flip-card-inner">
+                                             <div class="flip-card-front">
+                                                    <img src = "https://lh3.googleusercontent.com/a-/AAuE7mDpvc81BWI6zDjzUkWmifSqZOOvbNGS0iGvYFyZ_g=s192" alt = "Darshana" width="150" height="150">
+                                             </div>
+                                             <div class="flip-card-back">
+                                                    <h1>Darshana</h1> 
+                                                    <p>Programmer</p> 
+                                                    <p>Employee ID:2000</p>
+                                             </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class = "image-header" *ngIf ="name1==3000" class = "rounded-circle img-responsive" style="text-align:center;">
+                                        <div class="flip-card">
+                                            <div class="flip-card-inner">
+                                                 <div class="flip-card-front">
+                                                        <img src = "https://lh3.googleusercontent.com/a-/AAuE7mA5UfDChuvBSbb6Wn9LQ2bpb5hfTiDFslMufNKuUL8=s192" alt = "KrishnaK" width="150" height="150">
+                                                 </div>
+                                                 <div class="flip-card-back">
+                                                        <h1>Krishna</h1> 
+                                                        <p>Tester</p> 
+                                                        <p>Employee ID:3000</p>
+                                                 </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class = "image-header" *ngIf ="name1==4000" class = "rounded-circle img-responsive" style="text-align:center;">
+                                            <div class="flip-card">
+                                                <div class="flip-card-inner">
+                                                     <div class="flip-card-front">
+                                                            <img src = "https://lh3.googleusercontent.com/a-/AAuE7mAbHNDZxi28_AM9qlCe7fWYC6dLV2HMKPU4jH6Yrw=s192" alt = "Priyanka"  width="150" height="150">
+                                                     </div>
+                                                     <div class="flip-card-back">
+                                                            <h1>Priyanka</h1> 
+                                                            <p>Developer</p> 
+                                                            <p>Employee ID:4000</p>
+                                                     </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class = "image-header" *ngIf ="name1==5000" class = "rounded-circle img-responsive" style="text-align:center;">
+                                                <div class="flip-card">
+                                                    <div class="flip-card-inner">
+                                                         <div class="flip-card-front">
+                                                                <img src = "https://us.123rf.com/450wm/kadettmann/kadettmann1606/kadettmann160600106/60861454-passport-photo-of-a-young-arabic-woman.jpg?ver=6" alt = "Bharathi" width="150" height="150">
+                                                         </div>
+                                                         <div class="flip-card-back">
+                                                                <h1>Bharathi</h1> 
+                                                                <p>Programmer</p> 
+                                                                <p>Employee ID:5000</p>
+                                                         </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                        </div>
+                </td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                <td><app-employee></app-employee></td>
+    </tr>
+</table><br><br>
+<hr>
+<div *ngIf ="manager==1000" >
+        <h1 style="text-align:center;"><b>MANAGER DETAILS</b></h1>
+</div>
+<div *ngIf ="manager==2000" >
+        <h1 style="text-align:center;"><b>MANAGER DETAILS</b></h1>
+</div>
+<div *ngIf ="manager==3000" >
+        <h1 style="text-align:center;"><b>MANAGER DETAILS</b></h1>
+</div>
+
+<table>
+        <tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+            <td>
+            <div class = "image">
+                    <div class = "image-header" *ngIf ="manager==1000" class = "rounded-circle img-responsive" style="text-align:center;">
+                            <div class="flip-card">
+                                <div class="flip-card-inner">
+                                     <div class="flip-card-front">
+                                     <img src = "https://lh3.googleusercontent.com/a-/AAuE7mAxJdzpGEsJl234oY1rfAoXy2MJwhSMkZPa3UufhXo=s192" alt = "DhivyaB" width="150" height="150">
+                                     </div>
+                                     <div class="flip-card-back">
+                                            <h1>Dhivya</h1> 
+                                            <p>Developer</p> 
+                                            <p>Employee ID:1000</p>
+                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class = "image-header" *ngIf ="manager==2000" class = "rounded-circle img-responsive" style="text-align:center;">
+                                <div class="flip-card">
+                                    <div class="flip-card-inner">
+                                         <div class="flip-card-front">
+                                                <img src = "https://lh3.googleusercontent.com/a-/AAuE7mDpvc81BWI6zDjzUkWmifSqZOOvbNGS0iGvYFyZ_g=s192" alt = "Darshana" width="150" height="150">
+                                         </div>
+                                         <div class="flip-card-back">
+                                                <h1>Darshana</h1> 
+                                                <p>Programmer</p> 
+                                                <p>Employee ID:2000</p>
+                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class = "image-header" *ngIf ="manager==3000" class = "rounded-circle img-responsive" style="text-align:center;">
+                                    <div class="flip-card">
+                                        <div class="flip-card-inner">
+                                             <div class="flip-card-front">
+                                                    <img src = "https://lh3.googleusercontent.com/a-/AAuE7mA5UfDChuvBSbb6Wn9LQ2bpb5hfTiDFslMufNKuUL8=s192" alt = "KrishnaK" width="150" height="150">
+                                             </div>
+                                             <div class="flip-card-back">
+                                                    <h1>Krishna</h1> 
+                                                    <p>Tester</p> 
+                                                    <p>Employee ID:3000</p>
+                                             </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class = "image-header" *ngIf ="manager==4000" class = "rounded-circle img-responsive" style="text-align:center;">
+                                        <div class="flip-card">
+                                            <div class="flip-card-inner">
+                                                 <div class="flip-card-front">
+                                                        <img src = "https://lh3.googleusercontent.com/a-/AAuE7mAbHNDZxi28_AM9qlCe7fWYC6dLV2HMKPU4jH6Yrw=s192" alt = "Priyanka"  width="150" height="150">
+                                                 </div>
+                                                 <div class="flip-card-back">
+                                                        <h1>Priyanka</h1> 
+                                                        <p>Developer</p> 
+                                                        <p>Employee ID:4000</p>
+                                                 </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class = "image-header" *ngIf ="manager==5000" class = "rounded-circle img-responsive" style="text-align:center;">
+                                            <div class="flip-card">
+                                                <div class="flip-card-inner">
+                                                     <div class="flip-card-front">
+                                                            <img src = "https://us.123rf.com/450wm/kadettmann/kadettmann1606/kadettmann160600106/60861454-passport-photo-of-a-young-arabic-woman.jpg?ver=6" alt = "Bharathi" width="150" height="150">
+                                                     </div>
+                                                     <div class="flip-card-back">
+                                                            <h1>Bharathi</h1> 
+                                                            <p>Programmer</p> 
+                                                            <p>Employee ID:5000</p>
+                                                     </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                </div>
+    <td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+<td><app-manager></app-manager></td>
+
+</tr>
+</table>
+<!-- <button type ="button"  (click)="history()" >LeaveHistory</button>&nbsp;&nbsp;&nbsp; -->
+<!-- <button type ="button"(click)="applyLeave()" >New Application</button> -->
+
+<!-- <div class="flip-card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front">
+      <img src="img_avatar.png" alt="Avatar" style="width:300px;height:300px;">
+    </div>
+    <div class="flip-card-back">
+      <h1>John Doe</h1> 
+      <p>Architect & Engineer</p> 
+      <p>We love that guy</p>
+    </div>
+  </div>
+</div> -->
+<!-- <app-leavepending></app-leavepending> -->
+<div class="callout" *ngIf ="name1==1000">
+        <div class="callout-header">Leave Approvals</div>
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">×</span>
+        <div class="callout-container">
+          <p>They are leaves you need to approval <a href="leavepending">Approve/Deny</a> or close</p>
+        </div>
+</div>
+<div class="callout" *ngIf ="name1==2000">
+        <div class="callout-header">Leave Approvals</div>
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">×</span>
+        <div class="callout-container">
+          <p>They are leaves you need to approval <a href="leavepending">Approve/Deny</a> or close</p>
+        </div>
+</div>
+
+<div class="callout" *ngIf ="name1==3000">
+        <div class="callout-header">Leave Approvals</div>
+        <span class="closebtn" onclick="this.parentElement.style.display='none';">×</span>
+        <div class="callout-container">
+          <p>They are leaves you need to approval <a href="leavepending">Approve/Deny</a> or close</p>
+        </div>
+</div>
+
+
+</body>
+

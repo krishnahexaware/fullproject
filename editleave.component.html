@@ -1,0 +1,83 @@
+
+<br/>
+<body>
+                <table align="center">
+  <h1 style= "color:rgba(22, 18, 1, 0.993);"><b>EDIT LEAVE APPLICATION</b> </h1>
+  
+<div >
+      <form #userForm="ngForm" (ngSubmit)="editLeave(userForm)">
+      <div class="form-group">
+          <label for= "leaveStartDate"><b><font size="4">Start Date</font></b></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="Date" required="required" [(ngModel)]="model.leaveStartDate" name="leaveStartDate" #leaveStartDate="ngModel"  >  
+          <div *ngIf="leaveStartDate.invalid && userForm.submitted && !isValidFormSubmitted"  [ngClass] = "'error'"> 
+                <h6>Start Date is Required.</h6>
+               </div>
+               <br/>
+               <br/>
+             
+      </div>
+      <div class= "form-group">
+              <label for= "leaveEndDate"><b><font size="4">End Date</font>&nbsp;</b> </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <input type = "Date" class= "form-control"
+              id = "leaveEndDate" required="required"
+              [(ngModel)]= "model.leaveEndDate" name="leaveEndDate" #leaveEndDate="ngModel" (change)="calculateDays()">
+              <div *ngIf="leaveEndDate.invalid && userForm.submitted && !isValidFormSubmitted"  [ngClass] = "'error'"> 
+                     <h6>End Date is Required.</h6> 
+                    </div>
+                    <br/>
+                    <br/>
+          </div>
+          <div class="form-group">
+                  <label for="leaveType"><b><font size="4">Leave Type</font></b></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <select [(ngModel)]="model.leaveType" name="leaveType" required="required" #leaveType="ngModel">
+                      <option value="EL">EL</option>
+                      <option value="PL">PL</option>
+                      <option value="ML">ML</option>
+                  </select>
+          </div>
+          <br/>
+          <br/>
+          <div class= "form-group">
+                  <label for= "leaveNoOfDays"><b><font size="4">Number of Days</font></b> </label>&nbsp;
+                  <input type = "number" class= "form-control" readonly
+                  id = "leaveNoOfDays" required="required"
+                  [(ngModel)]= "model.leaveNoOfDays" name="leaveNoOfDays" #leaveNoOfDays="ngModel" >
+                  <div *ngIf="leaveNoOfDays.invalid && userForm.submitted && !isValidFormSubmitted"  [ngClass] = "'error'"> 
+                          <h6>Leave Days is Required.</h6> 
+                         </div>
+              </div>
+              <br/>
+              <br/>
+          <div class= "form-group">
+                  <label for= "leaveReason"><b><font size="4">Leave Reason</font> </b></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <input type = "text" class= "form-control" size="30"
+                  id = "leaveReason" required="required"
+                  [(ngModel)]= "model.leaveReason" name="leaveReason" #leaveReason="ngModel">
+                  <div *ngIf="leaveReason.invalid && userForm.submitted && !isValidFormSubmitted"  [ngClass] = "'error'"> 
+                          <h6>Reason is Required.</h6> 
+                         </div>
+              </div>
+              <br/>
+              <br/>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div align="center">
+              <button class=button>Submit</button>
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              <button  type ="button" class="button" (click)="cancel()"><i><b>Cancel</b></i></button></div>
+              <h3 *ngIf="isValidFormSubmitted == true">STATUS: {{this.msg}}</h3>
+        
+      </form>
+  </div>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  
+  <br/>
+  <br/>
+  </table>
+
+</body>

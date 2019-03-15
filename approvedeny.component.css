@@ -1,0 +1,55 @@
+body { 
+    background-color: powderblue;height: 560px;
+    background-image: url("http://webverden.com/portrait/Top-View-Accessories-Business-Office-Pen.jpg"); 
+    background-repeat: no-repeat, repeat;
+    height: 600px;
+    background-position: center;
+   
+    background-size: cover;
+    position: relative;
+  
+}
+ .button1 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid rgba(2, 83, 5, 0.898);
+  }
+  
+  .button1:hover {
+    background-color: rgb(76, 107, 77);
+    color: white;
+  }
+  .button2 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid rgb(224, 106, 106);
+  }
+  
+  .button2:hover {
+    background-color: rgb(76, 107, 77);
+    color: white;
+  }
+  
+  .button3 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid rgb(90, 123, 231);
+  }
+  
+  .button3:hover {
+    background-color: rgb(76, 107, 77);
+    color: white;
+  }
+
+  .button1 {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  }
+  .button2 {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  }
+
+  .button3 {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  }td{
+    text-align: left;
+  }

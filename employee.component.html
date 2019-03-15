@@ -1,0 +1,37 @@
+
+
+<!-- <table>
+  <tr> 
+    <td>EMPID:</td>
+  <td>{{ (employee | async)?.empId }}</td>
+</tr>
+ <tr>
+   <td>FULL NAME :</td>
+   <td>{{ (employee | async)?.empFullName }}</td>
+  </tr>
+<tr><td>EMAIL :</td>
+  <td>
+  {{ (employee | async)?.empEmail }}</td>
+</tr>
+<tr><td>MOBILE :</td><td>
+  {{ (employee | async)?.empMobile }}</td></tr>
+<tr><td>DATE OF JOINING:</td><td>
+  {{ (employee | async)?.empDateOfJoining }}</td></tr>
+<tr><td>LEAVE AVAILABLE:</td><td>
+  {{ (employee | async)?.empAvailabeLeave }}</td></tr>
+<tr><td>DEPARTMENT:</td><td>
+  {{ (employee | async)?.empDepartment }}</td></tr>
+
+</table> -->
+<body style="text-align:left;font-size:20px;" >
+<pre><b>
+Employee ID     :{{ (employee | async )?.empId}}
+Full Name       :{{ (employee | async )?.empFullName}}
+Email           :{{ (employee | async )?.empEmail}}
+Mobile Number   :{{ (employee | async )?.empMobile}}
+Date of Joining :{{ (employee | async )?.empDateOfJoining}}
+Manager ID      :{{ (employee | async )?.empMgrId}}
+Department      :{{ (employee | async )?.empDepartment}}
+Available Leave :{{ (employee | async )?.empAvailabeLeave}}</b>
+</pre>
+</body>

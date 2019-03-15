@@ -1,0 +1,73 @@
+tr:hover {background-color:rgba(128, 128, 128, 0.959)}
+th{background-color: rgba(51, 77, 50, 0.836)}
+
+tr:hover {background-color:#d67baaa1}
+
+
+
+button:hover {
+  -ms-transform: scale(1); /* IE 9 */
+  -webkit-transform: scale(1.0); /* Safari 3-8 */
+  transform: scale(1.1); 
+}
+
+body { 
+  background-image: url("rg.jpg"); 
+  background-repeat: no-repeat, repeat;
+  height: 2060px;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+
+}
+.iterator {
+  /* background-image: url("a3.jpg");  */
+    /* background-color: rgba(68, 66, 66, 0.911); */
+    color:black;
+    width :40%;
+  }
+  .msg1{
+    font-size: 20px;
+    color: #0D900A;
+  }
+  
+  #DashBoard {
+    top: 30px;
+    background-color: #555
+  }
+  #mySidenav a:hover {
+    right: 0;
+  }
+  
+  #mySidenav a {
+    position: absolute;
+    right: -25px;
+    transition: 0.3s;
+    padding: 15px;
+    width: 100px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    border-radius: 0 5px 5px 0;
+  }
+
+  Button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 15%;
+    text-align: center;
+    
+  }
+  .container {
+    padding: 16px;
+  }
+
+  .zoom:hover {
+    -ms-transform: scale(1); /* IE 9 */
+    -webkit-transform: scale(1.0); /* Safari 3-8 */
+    transform: scale(1.1); 
+  }

@@ -1,0 +1,53 @@
+<body style="font-size:100%;">
+
+<div>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <br/> <h1  style="font-size:300%;" class="glow"><b>LEAVE MANAGEMENT</b></h1>
+ 
+  
+  
+  <table border="3" align="center">
+    <tr><div class= "form-group">
+        <div class="input-group" >
+          <div class="input-group-addon" ><i class="glyphicon glyphicon-search" ></i></div>
+          <div class="input-container">
+            <i class="fa fa-search"></i>
+            <input type="text"  class="form-control"  name="searchString" placeholder="Search..."[(ngModel)]="searchString" onkeypress = "this.style.width = ((this.value.length + 1) * 8) + 'px';">
+          </div>
+          
+        </div>
+        </div></tr>
+    <tr>
+      <th>Profile</th>
+      <th>Employee ID</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Mobile No </th>
+      <th >Date of Joining </th>
+      <th>Manager ID</th>
+      <th>Available Leave</th>
+      <th>Deparment</th>
+      <th>Login</th>
+    </tr>
+    <tr *ngFor ="let user of emp | async | filterdata : {empFullName : searchString, empId : searchString, empEmail : searchString, empMobile : searchString, empDepartment : searchString}" >
+      <td *ngIf ="user.empId==1000"><img src = "https://lh3.googleusercontent.com/a-/AAuE7mAxJdzpGEsJl234oY1rfAoXy2MJwhSMkZPa3UufhXo=s192" alt = "DhivyaB"  width="100" height="80" ></td>
+      <td *ngIf ="user.empId==2000"><img src = "https://lh3.googleusercontent.com/a-/AAuE7mDpvc81BWI6zDjzUkWmifSqZOOvbNGS0iGvYFyZ_g=s192" alt = "Darshana" width="100" height="80"></td>
+      <td *ngIf ="user.empId==3000"><img src = "https://lh3.googleusercontent.com/a-/AAuE7mA5UfDChuvBSbb6Wn9LQ2bpb5hfTiDFslMufNKuUL8=s192" alt = "KrishnaK" width="100" height="80"></td>
+      <td *ngIf ="user.empId==4000"><img src = "https://lh3.googleusercontent.com/a-/AAuE7mAbHNDZxi28_AM9qlCe7fWYC6dLV2HMKPU4jH6Yrw=s192" alt = "Priyanka" width="100" height="80"></td>
+      <td *ngIf ="user.empId==5000"><img src = "https://us.123rf.com/450wm/kadettmann/kadettmann1606/kadettmann160600106/60861454-passport-photo-of-a-young-arabic-woman.jpg?ver=6" alt = "Bharathi" width="100" height="80"></td>
+      <td>{{user.empId}}</td>
+      <td>{{user.empFullName}}</td>
+      <td>{{user.empEmail}}</td>
+      <td>{{user.empMobile}}</td>
+      <td>{{user.empDateOfJoining}}</td>
+      <td>{{user.empMgrId}}</td>
+      <td>{{user.empAvailabeLeave}}</td>
+      <td>{{user.empDepartment}}</td>
+      <button type ="button" value ="login" (click)="login(user.empId,user.empMgrId)">&nbsp;login
+        </button>
+       </tr>
+    </table>
+  </div>
+
+</body>

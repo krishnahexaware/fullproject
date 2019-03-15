@@ -1,0 +1,72 @@
+<body>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <div id="mySidenav" class="sidenav">
+        <a href="#" id="Home"><i class="fa fa-fw fa-home"></i>&nbsp;&nbsp;Home</a>
+      </div>
+<!-- <h1 style= "color:black;text-align:center;" class="glow"><i><b>Hi name</b></i> </h1> -->
+<form name =frmlogin (ngSubmit)="login()" >
+  <div class = "image">
+      <div class = "image-header" *ngIf ="name==1000" class = "rounded-circle img-responsive" style="text-align:center;">
+            <h1 style= "color:black;text-align:center;" class="glow"><b>Hi DhivyaB</b> </h1>
+          <img src = "https://lh3.googleusercontent.com/a-/AAuE7mAxJdzpGEsJl234oY1rfAoXy2MJwhSMkZPa3UufhXo=s192" alt = "DhivyaB" width="150" height="150">
+      </div>
+      <div class = "image-header" *ngIf ="name==2000" class = "rounded-circle img-responsive" style="text-align:center;">
+            <h1 style= "color:black;text-align:center;" class="glow"><b>Hi Darshana</b></h1>
+          <img src = "https://lh3.googleusercontent.com/a-/AAuE7mDpvc81BWI6zDjzUkWmifSqZOOvbNGS0iGvYFyZ_g=s192" alt = "Darshana" width="150" height="150">
+      </div>
+      <div class = "image-header" *ngIf ="name==3000" class = "rounded-circle img-responsive" style="text-align:center;">
+            <h1 style= "color:black;text-align:center;" class="glow"><b>Hi KrishnaK</b> </h1>
+          <img src = "https://lh3.googleusercontent.com/a-/AAuE7mA5UfDChuvBSbb6Wn9LQ2bpb5hfTiDFslMufNKuUL8=s192" alt = "KrishnaK" width="150" height="150">
+      </div>
+      <div class = "image-header" *ngIf ="name==4000" class = "rounded-circle img-responsive" style="text-align:center;">
+            <h1 style= "color:black;text-align:center;" class="glow"><b>Hi Priyanka</b> </h1>
+          <img src = "https://lh3.googleusercontent.com/a-/AAuE7mAbHNDZxi28_AM9qlCe7fWYC6dLV2HMKPU4jH6Yrw=s192" alt = "Priyanka"  width="150" height="150">
+      </div>
+      <div class = "image-header" *ngIf ="name==5000" class = "rounded-circle img-responsive" style="text-align:center;">
+            <h1 style= "color:black;text-align:center;" class="glow"><b>Hi Bharathi</b> </h1>
+          <img src = "https://us.123rf.com/450wm/kadettmann/kadettmann1606/kadettmann160600106/60861454-passport-photo-of-a-young-arabic-woman.jpg?ver=6" alt = "Bharathi" width="150" height="150">
+      </div>
+  </div>
+<div class="container">
+  <table broder-color="black" width="50%"  align="center">
+   <tr> <label for="uname"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username"[(ngModel)]="name" name="uname" style="height:30px;" required readonly></tr><br/>
+<tr>
+    <label for="psw"><b>Password</b></label>
+   
+     <input type="password"placeholder="Enter Password"[(ngModel)]="password" name="psw" required >
+    </tr>
+    <br/> 
+    <tr>
+      <td>
+        <div class="zoom">
+        <button  type ="Submit"><i class="fa fa-fw fa-user"></i><i><b>Login</b></i></button>
+      </div> 
+    </td>
+    </tr>
+
+    
+  </table>
+  </div>
+  </form>
+</body>
+
+<!-- 
+        <div class="input-container">
+      <i class="fa fa-user icon"></i>
+      <input class="input-field" type="text" placeholder="Username" name="usrnm">
+    </div>
+  
+    <div class="input-container">
+      <i class="fa fa-envelope icon"></i>
+      <input class="input-field" type="text" placeholder="Email" name="email">
+    </div>
+    
+    <div class="input-container">
+      <i class="fa fa-key icon"></i>
+      <input class="input-field" type="password" placeholder="Password" name="psw">
+    </div>
+  
+    <button type="submit" class="btn">Register</button>
+  </form> -->
